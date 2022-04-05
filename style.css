@@ -1,7 +1,45 @@
-.h1-color {
-    color:tomato;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+  background: url(header.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
 }
-.h2-color {
-    color: blueviolet;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+.changing-words{
+ font-family: Helvetica,Helvetica Neue,Arial,sans-serif;
+ font-size:90px;
+ font-weight:bold;
+  text-transform:uppercase;
+}
+span.first{
+  color: ghostwhite;
+  text-shadow: 2px 2px 4px whitesmoke;
+
+}
+span.second{
+  color:burlywood;
+  text-shadow: 2px 2px 4px #000000;
+}
+.changing-words:hover span.first{
+  color:bisque;
+  cursor:pointer;
 }
 
+.changing-words:hover span.second{
+  color: blanchedalmond;
+  cursor:pointer;
+}
