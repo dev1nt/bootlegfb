@@ -1,45 +1,94 @@
-body,
-html {
-  width: 100%;
-  height: 100%;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
-  background: url(header.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
-}
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-}
-.changing-words{
- font-family: Helvetica,Helvetica Neue,Arial,sans-serif;
- font-size:90px;
- font-weight:bold;
+  }
+  .changing-words{
+  font-family: Helvetica,Helvetica Neue,Arial,sans-serif;
+  font-size:90px;
+  font-weight:bold;
   text-transform:uppercase;
-}
-span.first{
+  }
+  span.first{
   color: ghostwhite;
   text-shadow: 2px 2px 4px whitesmoke;
-
-}
-span.second{
+  
+  }
+  span.second{
   color:burlywood;
   text-shadow: 2px 2px 4px #000000;
-}
-.changing-words:hover span.first{
+  }
+  .changing-words:hover span.first{
   color:bisque;
   cursor:pointer;
-}
-
-.changing-words:hover span.second{
+  }
+  
+  .changing-words:hover span.second{
   color: blanchedalmond;
   cursor:pointer;
+  }
+  
+.cube {
+  width: 200px; 
+  height: 200px; 
+  margin: 100px auto; 
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  perspective: 600px;
+}
+.cube div {
+  width: 200px; 
+  height: 200px;
+  position: absolute;
+  transform-origin: center center -100px;
+}
+.side2 {
+  background-color: blue;
+  animation: spin2 infinite 2s linear;
+}
+.side3 {
+  background-color: orangered;
+  animation: spin3 infinite 2s linear;
+}
+.side4 {
+  background-color: yellowgreen;
+  animation: spin4 infinite 2s linear;
+}
+.side5 {
+  background-color:rebeccapurple;
+  animation: spin5 infinite 2s linear;
+}
+
+
+@keyframes spin2 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes spin3 {
+  0% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotateY(270deg);
+  }
+}
+@keyframes spin4 {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(450deg);
+  }
+}
+@keyframes spin5 {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
 }
